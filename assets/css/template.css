@@ -1,0 +1,190 @@
+* {
+    font-family: Arial;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CENTRALIZA A DIV  CONTAINER  - ENGLOBA A CONTAINER*/
+header {
+    display: flex;
+    justify-content: center;
+
+    height: 120px;
+}
+
+/* ENGLOBA .logo e .menu */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+
+}
+
+/* ENGLOBA LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* ENGLOBA NAV > E LISTA */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul,
+nav li {
+    /* REMOVE O ESTILO DA LISTA*/
+    list-style: none;
+
+    /* RESETA MARGIN E PADDING */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    /* POSSIBILITA MODIFICAR TAMANHO - BLOCK */
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+
+    /* PADRONIZA AS PALAVRAS EM CAIXA ALTA */
+    text-transform: uppercase;
+
+    color: #727272;
+
+}
+
+/* ESTILIZAÇÃO PARA QUANDO O LINK ESTIVER ATIVO E/OU AO PASSAR O MOUSE PELO LINK */
+nav .active a,
+nav a:hover {
+    background-color: #39aae1;
+    color: #fff;
+}
+
+#banner {
+
+    /* CENTRALIZA O CONTEÚDO QUE ESTÁ DENTRO DO CONTAINER */
+    display: flex;
+    justify-content: center;
+
+    /* INSERE A IMAGEM NO FUNDO DA SECTION - PARA IMAGEM APARECER TEM QUE DEFIRNIR UMA ALTURA */
+    background-image: url('../images/banner.jpg');
+
+    /* POSICIONA A IMAGEM AO CENTRO */
+    background-position: center;
+
+    /* AJUSTANTO O TAMANHO - COVER: em monitores grandes a imagem expande para preencher o espaço do banner, em dispositivos menores diminue (Se adapta conforme o tamanho da tela) */
+    background-size: cover;
+
+    height: 670px;
+
+}
+
+/* MODIFICA A DIREÇÃO DO FLEX PARA COLUMN (BANNER) */
+.column {
+    flex-direction: column;
+}
+
+.banner_headline {
+    /* TAMANHO QUE CORRESPONDE à DIFERENÇA DA ÁREA TOTAL (Se a adapta) - 210px do .banner_options */
+    flex: 1;
+
+    /* POSICIONAMENTO TEXTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_headline h1 {
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0 1px 0 #555;
+    margin: 0;
+    padding: 0;
+
+    /* DEFINE TAMANHO DA FIXO - max-width, porque em celular acaba sendo o tamanho total da tela. Nesse caso ele se adapta */
+    max-width: 350px;
+}
+
+.banner_headline h2 {
+    color: #fff;
+    font-size: 21px;
+    text-shadow: 0 1px 0 #555;
+    margin: 0;
+    padding: 0;
+
+    /* DEFINE TAMANHO DA FIXO - max-width, porque em celular acaba sendo o tamanho total da tela. Nesse caso ele se adapta */
+    max-width: 350px;
+}
+
+.banner_options {
+    /* DEFINE TAMANHO FIXO */
+    height: 210px;
+
+    /* DEIXA OS BANNERS COM ALINHAMENTO EM LINHA */
+    display: flex;
+}
+
+.banner1,
+.banner2,
+.banner3 {
+    /* PADRONIZA O TAMANHO DOS BANNERS */
+    flex: 1;
+    color: #FFF;
+    padding: 20px;
+
+}
+
+.banner1 {
+    background-color: #39aae1;
+}
+
+.banner2 {
+    background-color: #0079c7;
+}
+
+.banner3 {
+    background-color: #2b4c99;
+}
+
+/* ESPECIFICAÇÕES PARA O TÍTULO DOS BANNERS */
+.banner-title {
+    font-size: 21px;
+}
+
+/* DESCRIÇÃO */
+.banner-desc {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner_options a {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* HORÁRIOS DE FUNCIONAMENTO */
+.hours {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #b7afb1;
+}
